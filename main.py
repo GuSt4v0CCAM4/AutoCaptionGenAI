@@ -90,7 +90,7 @@ def split_audio(file_path, output_dir):
 
 
 
-def recognize_speech_from_wav(audio_file, lang='es-ES'): 
+def recognize_speech_from_wav(file_path, lang='es-ES'): 
     recognizer = sr.Recognizer()
 
     with sr.AudioFile(file_path) as source:
