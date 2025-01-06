@@ -36,7 +36,7 @@ def append_to_srt(file_path, subtitle_number, text, start_time_sec, end_time_sec
 
 
 
-def translate2SubLang(text,distLang:str = "en",src="hi"):
+def translate2SubLang(text,distLang:str = "es",src="es"):
     resp = translator.translate(text, dest=distLang,src=src)
     return resp.text
 
@@ -111,7 +111,7 @@ def recognize_speech_from_wav(audio_file, lang='es-ES'):
 # recognized_text = recognize_speech_from_wav('path_to_your_wav_file.wav')
 
 
-def Audio2SrtFile(audiofile,srcLang="hi",distLang= "en",srtFile = "caption.srt"):
+def Audio2SrtFile(audiofile,srcLang="es",distLang= "es",srtFile = "caption.srt"):
     
     split_audio(audiofile, "output_directory")
 
