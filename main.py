@@ -90,7 +90,7 @@ def split_audio(file_path, output_dir):
 
 
 
-def recognize_speech_from_wav(file_path,lang='en-IN'):
+def recognize_speech_from_wav(audio_file, lang='es-ES'): 
     recognizer = sr.Recognizer()
 
     with sr.AudioFile(file_path) as source:
@@ -164,7 +164,7 @@ if __name__ == "__main__":
 
     if len(sys.argv) > 1:
         video_to_audio(sys.argv[1] , "output_audio.wav")
-        Audio2SrtFile("output_audio.wav",srcLang="hi",distLang="en")
+        Audio2SrtFile("output_audio.wav", srcLang="es", distLang="es")
         
     else:
         print("No arguments passed. please provide a video file")
